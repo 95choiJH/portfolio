@@ -1,7 +1,5 @@
 
 $("document").ready(function() {  
-    
-    window.location.reload();
 
     var width = window.innerWidth;
         careerImg = $('.career-img');
