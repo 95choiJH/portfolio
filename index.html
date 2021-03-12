@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jun-Hyeon's Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+    <script src="script.js" defer></script>
+
+</head>
+<body id="wrap">
+    <header>
+        <div class="header-container">
+            <a class="menu menu-hover" href="#">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </a>
+        </div>
+    </header>
+    <div id="backLeft-wrap">
+        <div class="black">
+            <video class="backLeft-main backLeft" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="images/Car - 37692.mp4" type="video/mp4">
+            </video>
+        </div>
+        <img src="images/career-capture.png" alt="" class="career-img">
+        <img src="images/sdc-capture.png" alt="" class="sdc-img">
+        <img src="images/charger-capture.png" alt="" class="charger-img">
+    </div>
+    <div id="backRight-wrap">
+        <div class="backRight">
+            <div class="backRight-pre"></div>
+            <div class="backRight-next"></div>
+        </div>
+    </div>
+    <div class="scroll">
+        <h4 class="text">scroll</h4>
+         <span class="scroll-mark"></span>
+    </div>
+    <div class="contact">
+        <dl class="name">
+            <dt><i class="fas fa-user-circle"></i></dt>
+            <dd>최준현</dd>
+        </dl>
+        <dl class="tel">
+            <dt><i class="fas fa-phone-square-alt"></i></dt>
+            <dd><a href="tel:010-9298-3086">010-9298-3086</a></dd>
+        </dl>
+        <dl class="mail">
+            <dt><i class="fas fa-envelope-square"></i></dt>
+            <dd><a href="mailto:choiJH@gmail.com">choiJH@gmail.com</a></dd>
+        </dl>
+    </div>
+    <div class="menu-back">
+        <div class="profile">
+            <div class="text">
+                <dl>
+                    <dt><i class="fas fa-user-circle"></i><span>name</span></dt>
+                    <dd>최준현</dd>
+                    <li class="divider"><span></span></li>
+                    <dt><i class="fas fa-phone-square-alt"></i><span>phone number</span></dt>
+                    <dd><a href="tel:010-9298-3086">010-9298-3086</a></dd>
+                    <li class="divider"><span></span></li>
+                    <dt><i class="fas fa-envelope-square"></i><span>mail</span></dt>
+                    <dd><a href="mailto:choiJH@gmail.com">choiJH@gmail.com</a></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="menu-backRight">
+            <ul>
+                <li class="mouse-active menu-home"><a href="#">home</a></li>
+                <li class="divider"><span></span></li>
+                <li class="mouse-active menu-career"><a href="#">career</a></li>
+                <li class="mouse-active menu-sdc"><a href="#">sdc</a></li>
+                <li class="mouse-active menu-charger"><a href="#">charger</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section class="mainPage">
+            <article class="mainSide">
+                <div class="square">
+                    <div class="text">
+                        <h1 class="text-home">JUNHYEON'S PORTFOLIO</h1>
+                        <h1 class="text-career">CAREER</h1>
+                        <h1 class="text-sdc">SEOUL DRAGON CITY</h1>
+                        <h1 class="text-charger">CHARGER</h1>
+                    </div>
+                    <div class="category">
+                        <span class="category-home">home <i class="cate-fontawesome fas fa-home"></i></span>
+                        <span class="category-work">work <i class="cate-fontawesome fas fa-file-alt"></i></span>
+                    </div>
+                    <div class="btn-view">
+                        <a class="view view-career" href="javascript:void(0)"><i class="fas fa-angle-right"></i>SITE VIEW</a>
+                        <a class="view view-sdc" href="javascript:void(0)"><i class="fas fa-angle-right"></i>SITE VIEW</a>
+                        <a class="view view-charger" href="javascript:void(0)"><i class="fas fa-angle-right"></i>SITE VIEW</a>
+                    </div>
+                    <div class="addition">
+                        <p class="addition-career"> ▶ PC / Mobile Web / 반응형 / MainPage<br>▶ html5, css3, j-Query</p>
+                        <p class="addition-sdc"> ▶ PC / Mobile Web / 반응형 / MainPage<br>▶ html5, css3, j-Query</p>
+                        <p class="addition-charger"> ▶ PC / MainPage / html5, css3, j-Query</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
