@@ -194,6 +194,7 @@ $("document").ready(function() {
 
     $(window).scroll(function () {
         var height = $(document).scrollTop();
+        console.log(height);
         if(height > standardY*0.3){
             textHome.removeClass('text-appear');
         } else {
