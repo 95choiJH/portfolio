@@ -259,19 +259,16 @@ $("document").ready(function() {
             backright.css({"background-color" : homeColor});
             backrightNext.css({"background-color" : careerColor});
             backrightNext.css({"height" : height + "px"});
-        } else {
+        } else if(sdcImgY > height) {
             backright.css({"background-color" : careerColor});
             backrightNext.css({"background-color" : sdcColor});
             backrightNext.css({"height" : height - sdcImgY + standardY +"px"});
-        }
-        if(sdcImgY < height) {
-            backRight.css({"background-color" : sdcColor});
+        } else if(chargerImgY > height) {
+            backright.css({"background-color" : sdcColor});
             backrightNext.css({"background-color" : chargerColor});
             backrightNext.css({"height" : height - chargerImgY + standardY +"px"});
-        }
-        if(chargerImgY <= height) {
-            backRight.css({"background-color" : chargerColor});
-            backrightNext.css({"height" : "0"});
+        } else if(height > chargerImgY) {
+            backright.css({"background-color" : chargerColor});
         }
         if(height + $(window).height() == $(document).height()) {
             contact.addClass('contact-appear');
