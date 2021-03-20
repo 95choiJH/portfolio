@@ -95,14 +95,11 @@ header .header-container {display: flex; flex-direction: row-reverse; padding: 6
 /* MAIN - title */
 .mainPage {position: absolute; width: 100%; height: 100%; right: 0;} 
 #backLeft-wrap {position: absolute; top: 0; z-index: -1; width: 100%; height: 100%;}
-#backLeft-wrap .black {width: 100%; height: 100%; background-color: #000;}
-.backLeft {position: absolute; width: 100%; height: 100%; object-fit: cover;}
-.backLeftWork {width: 50%; height: 100%;}
-.backLeftWork .wrapper {position: relative; width: 70%; height: 100%;}
-.backLeftWork .container {position: absolute; width: 100%; height: 85%; overflow: auto; margin: 12.5% 0;}
-#backLeft-wrap img {display: block; width: 48.5%;}
+#backLeft-wrap .backLeft-main {width: 100%; height: 100%; object-fit: cover;}
+#backLeft-wrap img {display: block; width: 50%;}
+#backLeft-wrap .career-img {margin-top: -7px;}
 #backRight-wrap {position: absolute; top: 0; right: 0; width: 55%; height: 100%;}
-.backRight {z-index: -1; position: fixed; right: 0; top: 0; width: 55%; height: 100%; transform: skewX(-4deg); transform-origin: bottom right;}
+.backRight {z-index: -1; position: fixed; right: 0; top: 0; width: 55%; height: 100%; transform: skewX(-4deg); transform-origin: bottom right; background-color: #B8A310;}
 .backRight-pre {display: block; position: absolute; top: 0; width: 100%; height: 0;}
 .backRight-next {display: block; position: absolute; bottom: 0; width: 100%; height: 0;}
 .menu-backRight {position: absolute; right: -50%; top: 0; width: 25%; height: 100%; background-color: #444; transition: .5s;}

@@ -5,9 +5,6 @@ $("document").ready(function() {
         careerImg = $('.career-img');
         sdcImg = $('.sdc-img');
         chargerImg = $('.charger-img');
-        standardY = careerImg.offset().top;
-        sdcImgY = sdcImg.offset().top;
-        chargerImgY = chargerImg.offset().top;
         text = $('.text');
         textHome = $('.text-home');
         textCareer = $('.text-career');
@@ -40,7 +37,6 @@ $("document").ready(function() {
         square = $('.square');
         backLeftWork = $('.backLeftWork');
         backRightWrap = $('#backRight-wrap');
-        backRight = $('.backRight');
         width_size = window.innerWidth;
         scrollMark = $('.scroll');
         var delta = 300; var timer = null;
@@ -90,16 +86,12 @@ $("document").ready(function() {
         resizeTest();
     })
 
-    $( window ).on( 'resize', function( ) { 
-        clearTimeout( timer ); 
-        timer = setTimeout( resizeDone, delta ); 
-    }); 
-    function resizeDone( ) { 
-        window.location.reload();
-    }
-
     window.addEventListener('resize', function() {
         var height = $(document).scrollTop();
+            standardY = careerImg.offset().top;
+            sdcImgY = sdcImg.offset().top;
+            chargerImgY = chargerImg.offset().top;
+        console.log(standardY);
         if(standardY > height) {
             backright.css({"background-color" : homeColor});
             backrightNext.css({"background-color" : careerColor});
@@ -194,7 +186,11 @@ $("document").ready(function() {
 
     $(window).scroll(function () {
         var height = $(document).scrollTop();
+            standardY = careerImg.offset().top;
+            sdcImgY = sdcImg.offset().top;
+            chargerImgY = chargerImg.offset().top;
         console.log(height);
+        console.log(sdcImgY);
         if(height > standardY*0.3){
             textHome.removeClass('text-appear');
         } else {
