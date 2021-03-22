@@ -3,21 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 /* CSS RESET */
-html,body,div,span,h1,h2,h3,h4,h5,h6,img,dl,dt,dd,ul,ol,li,p {list-style: none; margin: 0; padding: 0; border: 0; vertical-align: baseline; line-height: 1; font: inherit; font-size: 100%; font-weight: normal;}
+html,body,div,span,h1,h2,h3,h4,h5,h6,img,dl,dt,dd,ul,ol,li,p {margin: 0; padding: 0; border: 0; list-style: none; vertical-align: baseline; line-height: 1; font: inherit; font-size: 100%; font-weight: normal;}
 article,header,section {display: block;}
 ul {padding: 0; list-style: none;}
 a {text-decoration: none; color: #fff}
-p {position: absolute; font-family: 'Do Hyeon', sans-serif; font-size: .9vw; color: #000; opacity: 0; transition: .3s;}
+p {position: absolute; font-family: 'Do Hyeon', sans-serif; font-size: .9vw; color: #000; transition: .3s; opacity: 0;}
 p.appear {opacity: .5;}
 body {width: 100% !important; height: 100vh; font-family: 'Lato', sans-serif; font-size: 32px; color: black;}
 main {position: fixed; right: 0; width: 55%; height: 100%;}
 .clear::after {display: block; content: ''; clear: both;}
 
 /* HEADER */
-header {z-index: 2; position: absolute; width: 100%; height: 150px; pointer-events: none;}
-header .header-container {display: flex; flex-direction: row-reverse; padding: 60px 55px; height: 100%; box-sizing: border-box;}
-.menu {position: fixed; display: inline-block; width: 27px; height: 23px; z-index: 2; pointer-events: all;}
-.menu span {position: absolute; display: inline-block; left: 0; width: 100%; height: 5px; background-color: white; border-radius: 3px; transition: .3s;}
+header {z-index: 2; position: absolute; width: 100%; height: 150px;}
+header .header-container {display: flex; flex-direction: row-reverse; height: 100%; padding: 60px 55px; box-sizing: border-box; }
+.menu {position: fixed; width: 27px; height: 23px;}
+.menu span {position: absolute; left: 0; width: 100%; height: 5px; background-color: white; border-radius: 3px; transition: .3s;}
 .menu span:nth-of-type(1) {top: 0;}
 .menu span:nth-of-type(2) {top: 9px;}
 .menu span:nth-of-type(3) {bottom: 0;}
@@ -31,76 +31,22 @@ header .header-container {display: flex; flex-direction: row-reverse; padding: 6
 .menu.active span:nth-of-type(2) {
     left : 60%;
     opacity : 0;
-    -webkit-animation : active-menu .8s forwards;
-    animation : active-menu .8s forwards;
-}
-@-webkit-keyframes active-menu {
-    100% {
-        height : 0;
-    }
-}
-@keyframes active-menu {
-    100% {
-        height : 0;
-    }
-}
-
-@keyframes active_profile {
-    100% {
-        text-indent: 20%;
-    }
-}
-
-@keyframes text-appear {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes category-appear {
-    0% {
-        opacity: 0;
-        margin-right: 30px;
-    }
-    100% {
-        opacity: 1;
-        margin: 0;
-    }
-}
-
-@keyframes view-appear {
-    0% {
-        opacity: 0;
-        left: 59%;
-    }
-    100% {
-        opacity: 1;
-        left: 0;
-    }
 }
 
 .menu.active span:nth-of-type(3) {
     -webkit-transform : translateY(-9px) rotate(45deg);
     transform : translateY(-9px) rotate(45deg);
 }
-.scroll {position: fixed; bottom: 0; width: 100%; text-align: center;}
-.scroll .text {display: block; margin-bottom: 10px; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; font-size: 1.25vw; color: #fff}
-.scroll .scroll-mark {display: block; width: 2px; height: 40px; background: #fff; margin: 0 auto;}
 
-/* MAIN - title */
-.mainPage {position: absolute; width: 100%; height: 100%; right: 0;} 
-#backLeft-wrap {position: absolute; top: 0; z-index: -1; width: 100%; height: 100%;}
+/* BACKLEFT */
+#backLeft-wrap {position: absolute; z-index: -1; height: 100%;}
 #backLeft-wrap .backLeft-main {width: 100%; height: 100%; object-fit: cover;}
 #backLeft-wrap img {display: block; width: 50%;}
 #backLeft-wrap .career-img {margin-top: -7px;}
+
+/*BACKRIGHT */
 #backRight-wrap {position: absolute; top: 0; right: 0; width: 55%; height: 100%;}
-.backRight {z-index: -1; position: fixed; right: 0; top: 0; width: 55%; height: 100%; transform: skewX(-4deg); transform-origin: bottom right; background-color: #B8A310;}
-.backRight-pre {display: block; position: absolute; top: 0; width: 100%; height: 0;}
+#backRight-wrap .backRight {position: fixed; right: 0; width: 55%; height: 100%; transform: skewX(-4deg); transform-origin: bottom right; background-color: #B8A310; box-shadow: rgb(17 17 17) 5px 5px 15px 2px;}
 .backRight-next {display: block; position: absolute; bottom: 0; width: 100%; height: 0;}
 .menu-backRight {position: absolute; right: -50%; top: 0; width: 25%; height: 100%; background-color: #444; transition: .5s;}
 .menu-backRight::before {content: ''; position: absolute; left: -13%; width: 13%; height: 100%; background-color: #444; transform-origin: bottom right; transform: skewX(-3deg);}
@@ -109,6 +55,10 @@ header .header-container {display: flex; flex-direction: row-reverse; padding: 6
 .backRight-career {background-color: #15cb98;}
 .backRight-sdc {background-color: #727584;}
 .backRight-charger {background-color: #E3A062;}
+
+.scroll {position: fixed; bottom: 0; width: 100%; text-align: center;}
+.scroll .text {display: block; margin-bottom: 10px; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px; font-size: 1.25vw; color: #fff}
+.scroll .scroll-mark {display: block; width: 2px; height: 40px; background: #fff; margin: 0 auto;}
 
 .contact {z-index: 1; position: fixed; width: 55%; right: 0; text-align: center; bottom: -100px; background-color: #242000; padding: 13px 0; transition: .5s; border-radius: 70px 70px 0 0;}
 .contact.contact-appear {transform: translateY(-100px);}
@@ -133,6 +83,7 @@ header .header-container {display: flex; flex-direction: row-reverse; padding: 6
 .menu-open {opacity: 1; pointer-events: visible;}
 .menu-open-backRight {right: 0; transition: .7s ease-out .1s;}
 
+.mainPage {position: absolute; width: 100%; height: 100%; right: 0;} 
 .mainSide {position: relative; top: 50%; height: 100%; transform: translateY(-50%);}
 .mainSide .square {position: absolute; left: 0; right: 0; top: 55%; width: 68%; height: 60%; margin: 0 auto;border: 1px solid #242000; transform: translateY(-50%);}
 .mainSide .square .category {position: absolute; font-size: 16px; top: -30px; right: 0; transition: .5s;}
@@ -179,7 +130,7 @@ header .header-container {display: flex; flex-direction: row-reverse; padding: 6
     .backLeftWork .wrapper {position: relative; width: 100%; height: 100%; top: 150px; left: 0; margin: 0;}
     .backLeftWork .container {margin: 0; overflow: hidden;}
     #backRight-wrap {left: 0; width: 100%; height: 150px;}
-    .backRight {box-shadow: none; transform: none; right: auto; width: 100%; height: 150px;}
+    #backRight-wrap .backRight {transform: none; right: auto; width: 100%; height: 150px;}
     .menu-backRight {width: 30%;}
     .menu-backRight::before {left: -23%; width: 23%;}
     .mainSide .square-profile {display: none;}
@@ -206,3 +157,44 @@ header .header-container {display: flex; flex-direction: row-reverse; padding: 6
     .menu-backRight::before {left: -25%; width: 25%;}
     .mainSide .square-profile {display: none;}
   }
+
+  
+/* animation */
+@keyframes active_profile {
+    100% {
+        text-indent: 20%;
+    }
+}
+
+@keyframes text-appear {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes category-appear {
+    0% {
+        opacity: 0;
+        margin-right: 30px;
+    }
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+@keyframes view-appear {
+    0% {
+        opacity: 0;
+        left: 59%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
